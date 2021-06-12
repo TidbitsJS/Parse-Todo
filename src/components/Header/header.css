@@ -1,0 +1,70 @@
+.todo-header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.7rem 5rem;
+}
+
+.todo-header-container-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo-header-container-title-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-header-container-title-text img {
+  width: 65px;
+  height: 65px;
+}
+
+.todo-header-container-title-text h1 {
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
+.todo-header-container-title-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 2rem;
+}
+
+.todo-header-container-title-user img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.todo-header-container-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.7rem;
+  margin-left: 1rem;
+}
+.todo-header-container-info p {
+  color: #656566;
+}
+
+.todo-header-container-info p:last-child {
+  margin-top: 0.4rem;
+}
+
+.todo-header-container-info span {
+  background: #f6f7f8;
+  color: #1725a4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.todo-header-container-info br {
+  margin-bottom: 1rem;
+}
