@@ -11,6 +11,11 @@ const Card = () => {
             <span>12</span>th March, 2021
           </p>
         </div>
+        <div className="todo-card-container-header-todo">
+          <div className="todo-card-container-header-todoType">
+            <p>In Progress</p>
+          </div>
+        </div>
       </div>
       <div className="todo-card-container-header-task">
         <div className="todo-card-container-header-task-headText">
