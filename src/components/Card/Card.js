@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import todoColors from "utils/colors";
 
 import "./card.css";

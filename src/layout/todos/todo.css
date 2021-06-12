@@ -7,13 +7,29 @@
   display: flex;
   flex-direction: column;
 
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
+}
+
+.todo-bdy-container-headText {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.todo-bdy-container-headText::first-letter {
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .todo-body-card-container {
   margin-top: 2rem;
 
-  columns: 3 150px;
+  columns: 3 315px;
   column-gap: 0rem;
-  /* margin: 0 auto; */
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  .todo-body-container {
+    padding: 1rem 0.5rem;
+  }
 }

@@ -13,7 +13,7 @@ const dummyTodos = [
     month: "March",
     year: 2021,
     description:
-      "Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.",
+      "Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project.",
   },
   {
     title: "React",
@@ -35,7 +35,7 @@ const dummyTodos = [
     month: "Novmber",
     year: 2021,
     description:
-      "Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project.",
+      "Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project. Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project.",
   },
   {
     title: "Academind",
@@ -68,7 +68,7 @@ const dummyTodos = [
     month: "July",
     year: 2021,
     description:
-      "Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project.",
+      "Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project. Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project. Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project. Create and code a fancy card for the todo project. Make sure to add different kinds of priorites, dates, and buttons. Plus make it look elegant and more attractive.Create and code a fancy card for the todo project.",
   },
   {
     title: "GSSOC'21",
@@ -86,11 +86,12 @@ const dummyTodos = [
 const Todo = () => {
   return (
     <div className="todo-body-container">
-      <h2>Todo List</h2>
+      <h2 className="todo-bdy-container-headText">Todo List</h2>
       <div className="todo-body-card-container">
         {dummyTodos.map((todo) => (
           <Card
             title={todo.title}
+            key={todo.title + todo.type + todo.day}
             type={todo.type}
             priority={todo.priority}
             subTitle={todo.subTitle}

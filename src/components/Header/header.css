@@ -68,3 +68,13 @@
 .todo-header-container-info br {
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+  .todo-header-container {
+    padding: 0.5rem;
+  }
+
+  .todo-header-container-title-user {
+    margin-right: 0rem;
+  }
+}
