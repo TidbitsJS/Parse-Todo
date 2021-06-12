@@ -1,0 +1,16 @@
+:root {
+  --todo-background: #05c73f;
+  --progress-background: #ad3cee;
+  --done-background: #ff236c;
+
+  --high-priority-bg: #ffeded;
+  --high-priority-text: #f04949;
+
+  --medium-priority-bg: #f2e3ff;
+  --medium-priority-text: #bd15ff;
+
+  --low-priority-bg: #dcffe7;
+  --low-priority-text: #11ce4a;
+
+  --sub-text: #132850;
+}

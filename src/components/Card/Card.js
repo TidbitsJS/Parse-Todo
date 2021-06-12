@@ -1,40 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
+import todoColors from "utils/colors";
 
 import "./card.css";
 
-const Card = () => {
+const Card = (props) => {
+  let typeBg = todoColors.todoBackground;
+  let priorityBg = todoColors.lowPriorityBg;
+  let priorityText = todoColors.lowPriorityText;
+
+  const { title, type, priority, subTitle, day, month, year, description } =
+    props;
+
+  if (type === "Done") {
+    typeBg = todoColors.doneBackground;
+  } else if (type === "In Progress") {
+    typeBg = todoColors.progressBackground;
+  }
+
+  if (priority === "High") {
+    priorityBg = todoColors.highPriorityBg;
+    priorityText = todoColors.highPriorityText;
+  } else if (priority === "Medium") {
+    priorityBg = todoColors.mediumPriorityBg;
+    priorityText = todoColors.mediumPriorityText;
+  }
+
   return (
-    <div className="todo-card-container">
+    <div className="todo-card-container" style={{ borderTopColor: typeBg }}>
       <div className="todo-card-container-header-date">
         <div className="todo-card-container-header-date-text">
           <p>
-            <span>12</span>th March, 2021
+            <span>{day}</span>th {month}, {year}
           </p>
         </div>
         <div className="todo-card-container-header-todo">
-          <div className="todo-card-container-header-todoType">
-            <p>In Progress</p>
+          <div
+            className="todo-card-container-header-todoType"
+            style={{ background: typeBg }}
+          >
+            <p>{type}</p>
           </div>
         </div>
       </div>
       <div className="todo-card-container-header-task">
         <div className="todo-card-container-header-task-headText">
-          <h2>Code It</h2>
+          <h2>{title}</h2>
         </div>
         <div className="todo-card-container-header-task-subText">
-          <p>Code at least an hour everyday</p>
+          <p>{subTitle}</p>
         </div>
       </div>
       <div className="todo-card-container-bodyDesc">
         <div className="todo-card-container-priority">
-          <p>High Priority</p>
+          <p style={{ color: priorityText, background: priorityBg }}>
+            {priority} Priority
+          </p>
         </div>
         <div className="todo-card-container-description">
-          <p>
-            Create and code a fancy card for the todo project. Make sure to add
-            different kinds of priorites, dates, and buttons. Plus make it look
-            elegant and more attractive.
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     </div>

@@ -13,8 +13,7 @@
 .todo-body-card-container {
   margin-top: 2rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  columns: 3 150px;
+  column-gap: 0rem;
+  /* margin: 0 auto; */
 }
