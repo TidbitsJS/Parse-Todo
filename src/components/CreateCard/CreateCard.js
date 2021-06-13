@@ -2,10 +2,16 @@ import React from "react";
 
 import "./createCard.css";
 
-const CreateCard = () => {
+const CreateCard = (props) => {
+  const toggleClick = () => {
+    props.showCreateTodo(true);
+  };
+
   return (
     <div className="todo-createCard-container">
-      <div className="todo-createCard-btn">+ New</div>
+      <div className="todo-createCard-btn" onClick={toggleClick}>
+        + New
+      </div>
     </div>
   );
 };

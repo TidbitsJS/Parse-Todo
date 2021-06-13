@@ -31,7 +31,7 @@
 .todo-body-card-container {
   margin-top: 2rem;
 
-  columns: 3 auto;
+  columns: 3 350px;
   column-gap: 0rem;
   margin: 0 auto;
 }

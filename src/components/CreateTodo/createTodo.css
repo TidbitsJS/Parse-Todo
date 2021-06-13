@@ -1,0 +1,65 @@
+.todo-sliding-sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
+  left: -100%;
+  bottom: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  background: #fff;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+  -webkit-animation: slideIn 0.5s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.7s forwards;
+  animation-delay: 2s;
+  -webkit-animation: slideOut 0.7s forwards;
+}
+
+.todo-sliding-sidebar-cancel {
+  width: 100%;
+}
+
+@keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  100% {
+    left: -100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .todo-sliding-sidebar {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .todo-sliding-sidebar {
+    width: 92vw;
+  }
+}

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "components/Card/Card";
 import CreateCard from "components/CreateCard/CreateCard";
 
 import "./todo.css";
+import SideBar from "layout/Sidebar/SideBar";
 
 const dummyTodos = [
   {
@@ -85,28 +86,37 @@ const dummyTodos = [
 ];
 
 const Todo = () => {
+  const [toggleCreateTodo, setToggleCreateTodo] = useState(false);
+
+  const showCreateTodo = (toggle) => {
+    setToggleCreateTodo(toggle);
+  };
+
   return (
-    <div className="todo-body-container">
-      <h2 className="todo-bdy-container-headText">Todo List</h2>
-      <div className="todo-body-container-Wrapper">
-        <CreateCard />
-        <div className="todo-body-card-container">
-          {dummyTodos.map((todo) => (
-            <Card
-              title={todo.title}
-              key={todo.title + todo.type + todo.day}
-              type={todo.type}
-              priority={todo.priority}
-              subTitle={todo.subTitle}
-              day={todo.day}
-              month={todo.month}
-              year={todo.year}
-              description={todo.description}
-            />
-          ))}
+    <>
+      {toggleCreateTodo && <SideBar showCreateTodo={showCreateTodo} />}
+      <div className="todo-body-container">
+        <h2 className="todo-bdy-container-headText">Todo List</h2>
+        <div className="todo-body-container-Wrapper">
+          <CreateCard showCreateTodo={showCreateTodo} />
+          <div className="todo-body-card-container">
+            {dummyTodos.map((todo) => (
+              <Card
+                title={todo.title}
+                key={todo.title + todo.type + todo.day}
+                type={todo.type}
+                priority={todo.priority}
+                subTitle={todo.subTitle}
+                day={todo.day}
+                month={todo.month}
+                year={todo.year}
+                description={todo.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
