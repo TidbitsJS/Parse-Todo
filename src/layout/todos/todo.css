@@ -13,6 +13,7 @@
 .todo-bdy-container-headText {
   font-size: 3rem;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .todo-bdy-container-headText::first-letter {
@@ -20,10 +21,17 @@
   font-weight: 700;
 }
 
+.todo-body-container-Wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .todo-body-card-container {
   margin-top: 2rem;
 
-  columns: 3 315px;
+  columns: 3 auto;
   column-gap: 0rem;
   margin: 0 auto;
 }

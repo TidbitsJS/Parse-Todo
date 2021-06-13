@@ -1,5 +1,6 @@
-import Card from "components/Card/Card";
 import React from "react";
+import Card from "components/Card/Card";
+import CreateCard from "components/CreateCard/CreateCard";
 
 import "./todo.css";
 
@@ -87,20 +88,23 @@ const Todo = () => {
   return (
     <div className="todo-body-container">
       <h2 className="todo-bdy-container-headText">Todo List</h2>
-      <div className="todo-body-card-container">
-        {dummyTodos.map((todo) => (
-          <Card
-            title={todo.title}
-            key={todo.title + todo.type + todo.day}
-            type={todo.type}
-            priority={todo.priority}
-            subTitle={todo.subTitle}
-            day={todo.day}
-            month={todo.month}
-            year={todo.year}
-            description={todo.description}
-          />
-        ))}
+      <div className="todo-body-container-Wrapper">
+        <CreateCard />
+        <div className="todo-body-card-container">
+          {dummyTodos.map((todo) => (
+            <Card
+              title={todo.title}
+              key={todo.title + todo.type + todo.day}
+              type={todo.type}
+              priority={todo.priority}
+              subTitle={todo.subTitle}
+              day={todo.day}
+              month={todo.month}
+              year={todo.year}
+              description={todo.description}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

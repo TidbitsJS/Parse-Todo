@@ -1,0 +1,19 @@
+.todo-createCard-container {
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.todo-createCard-btn {
+  border: 2px dashed #929fa8;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+  font-size: 1rem;
+  transition: 0.5s ease;
+  color: #386b45;
+}
+
+.todo-createCard-btn:hover {
+  color: #000;
+}
